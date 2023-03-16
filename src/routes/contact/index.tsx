@@ -2,13 +2,13 @@ import { component$ } from "@builder.io/qwik";
 
 export default component$(() => {
   return (
-    <div class="flex w-5/6">
+    <div class="flex w-5/6 justify-around flex-col">
       <div class="flex flex-col text-white-5 w-3/6">
         <h1 class="text-5xl tracking-mostwide">contact</h1>
         <p class="mt-10 font-roboto">
           Got a project in your mind? We can create something unique together.
         </p>
-        <h4 class="text-2xl mt-14">
+        <h4 class="text-1xl mt-14">
           fill out the form below to make a contact with me...
         </h4>
         <form class="flex flex-col mt-14">
@@ -81,20 +81,23 @@ export default component$(() => {
               Message
             </label>
           </fieldset>
+          <fieldset class="flex items-center mt-4">
+            <input type="checkbox" id="terms" class=" appearance-none accent-cyan-5 w-4 h-4
+            border-solid border-2 border-gray-5 checked:bg-cyan-5"></input>
+            <label for="terms" class="text-gray-5 ml-3 text-sm">I accept the Terms and Conditions.</label>
+          </fieldset>
 
-          <input type="checkbox" id="terms"></input>
-          <label for="terms">I accept the Terms and Conditions.</label>
           <button class="bg-cyan-5 px-10 py-3.5 shadow-btn text-black-5 mt-16 hover:bg-white hover:shadow-hoverbtn duration-500">
             send message
           </button>
         </form>
       </div>
-      <div>
-        <h4 class="text-2xl text-white-5">
-        ...or connect with me on social medias:
+      <div class="flex flex-col items-center justify-center">
+        <h4 class="text-1xl text-white-5 mb-20">
+          ...or connect with me on social medias:
         </h4>
 
-        <div class="flex w-3/6 justify-center">
+        <div class="flex justify-center">
           <a href="https://twitter.com/iBrunoj" target="blank">
             <img
               class="w-8 px-3 box-content border-r-2 hover:cursor-pointer"
