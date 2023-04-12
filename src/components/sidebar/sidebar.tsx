@@ -3,11 +3,11 @@ import { useContent, useLocation } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const { menu } = useContent();
-  const { pathname } = useLocation();
+  const { url } = useLocation();
   const sidebar = useStore({sidebarOpen: false});
   return (
 
-    <div class="flex flex-col justify-between px-8 xl:px-24 bg-white absolute z-10 w-full xl:w-auto xl:flex xl:relative">
+    <div class="absolute flex flex-col justify-between px-8 xl:px-24 bg-white z-10 w-full xl:w-auto xl:flex xl:relative">
       <div>
         <div class="logo py-2 xl:mt-11">
           <img
@@ -40,9 +40,9 @@ export default component$(() => {
                     <a
                       class={{
                         "font-audio text-lg": true,
-                        "text-black-5": pathname === el.href,
+                        "text-black-5": url.pathname === el.href,
                         "text-gray-5 hover:cursor-pointer":
-                          pathname !== el.href,
+                        url.pathname !== el.href,
                       }}
                       href={el.href}
                     >

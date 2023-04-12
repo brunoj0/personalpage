@@ -7,7 +7,7 @@ export default component$(() => {
     <>
       <div class="flex h-full flex-col xl:flex-row">
         <Sidebar></Sidebar>
-        <main class="flex flex-col-reverse xl:flex-col w-full">
+        <main class="pt-16 xl:pt-0 flex flex-col-reverse xl:flex-col w-full">
           <Header/>
           <section class="h-full bg-black-5 bg-hero-pattern bg-center bg-no-repeat flex justify-center items-center">
             <Slot />
