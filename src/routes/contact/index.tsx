@@ -6,20 +6,28 @@ export default component$(() => {
   return (
     <div
       class="min-h-[calc(100vh_-_96px)] flex w-5/6 justify-around items-center flex-col
-    xl:flex-row"
+    xl:flex-row 2xl:w-5/6 2xl:max-w-[1200px]"
     >
       <div class="flex flex-col text-white-5 xl:w-3/6">
-        <h1 class="text-5xl tracking-mostwide self-center xl:self-auto">
+        <h1 class="text-5xl tracking-mostwide self-center xl:self-auto my-4 xl:m-0">
           contact <span class="opacity-25">0{index}</span>
         </h1>
         <p class="mt-10 font-roboto">
           Got a project in your mind? We can create something unique together.
         </p>
         <h4 class="text-1xl mt-14">
-          fill out the form below to make a contact with me...
+          fill out the form below to contact with me...
         </h4>
-        <form class="flex flex-col mt-14" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="cba152a4-02a7-4c36-89f0-b40ffd0a0e1f"/>
+        <form
+          class="flex flex-col mt-14"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="cba152a4-02a7-4c36-89f0-b40ffd0a0e1f"
+          />
           <div class="flex justify-between">
             <fieldset class="relative max-w-[45%]">
               <input
@@ -103,39 +111,45 @@ export default component$(() => {
               id="terms"
               class=" appearance-none accent-cyan-5 w-4 h-4
             border-solid border-2 border-gray-5 checked:bg-cyan-5"
-            required
+              required
             ></input>
             <label for="terms" class="text-gray-5 ml-3 text-sm">
               I accept the Terms and Conditions.
             </label>
           </fieldset>
-          <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
-          <button class="bg-cyan-5 px-6 xl:px-10 py-3.5 shadow-btn text-black-5 mt-16 hover:bg-white hover:shadow-hoverbtn duration-500 w-44 xl:w-56"
-          type="submit">
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://web3forms.com/success"
+          />
+          <button
+            class="bg-cyan-5 px-6 xl:px-10 py-3.5 shadow-btn text-black-5 mt-16 mx-auto xl:mx-0 hover:bg-white hover:shadow-hoverbtn duration-500 w-44 xl:w-56"
+            type="submit"
+          >
             send message
           </button>
         </form>
       </div>
       <div class="flex flex-col items-center justify-center">
-        <h4 class="text-1xl text-white-5 mb-10 xl:mb-20">
+        <h4 class="text-1xl text-white-5 mb-10 my-10 xl:mb-20">
           ...or connect with me on social medias:
         </h4>
 
-        <div class="flex justify-center">
-          <a href="https://twitter.com/iBrunoj" target="blank">
-            <img
-              class="w-8 px-3 box-content border-r-2 hover:cursor-pointer"
-              src="/assets/linkedinblue.svg"
-              alt="twitter"
-            ></img>
-          </a>
+        <div class="flex justify-center mb-4">
           <a
-            href="https://www.linkedin.com/in/bruno-jamu%C5%82a-98402a200/"
+            href="https://github.com/brunoj0"
             target="blank"
           >
             <img
               class="w-8 px-3 box-content hover:cursor-pointer"
               src="/assets/githblue.svg"
+              alt="github"
+            ></img>
+          </a>
+          <a href="https://twitter.com/iBrunoj" target="blank">
+            <img
+              class="w-8 px-3 box-content border-r-2 hover:cursor-pointer"
+              src="/assets/linkedinblue.svg"
               alt="linkedin"
             ></img>
           </a>
@@ -143,6 +157,7 @@ export default component$(() => {
             <img
               class="w-8 px-3 box-content border-l-2 hover:cursor-pointer"
               src="/assets/instblue.svg"
+              alt="instagram"
             ></img>
           </a>
         </div>

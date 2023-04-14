@@ -1,10 +1,14 @@
 import { component$, useStore } from "@builder.io/qwik";
 import { useContent, useLocation } from "@builder.io/qwik-city";
+import { SideBarStore } from "~/routes/layout";
 
-export default component$(() => {
+interface SidebarProps {
+    store: SideBarStore;
+}
+
+export default component$((props: SidebarProps ) => {
   const { menu } = useContent();
   const { url } = useLocation();
-  const sidebar = useStore({sidebarOpen: false});
   return (
 
     <div class="absolute flex flex-col justify-between px-8 xl:px-24 bg-white z-10 w-full xl:w-auto xl:flex xl:relative">
@@ -19,7 +23,7 @@ export default component$(() => {
           src="/assets/LOGO.png"></img>
         </div>
         <div class="container nav-container xl:hidden">
-            <input onClick$={() => sidebar.sidebarOpen = !sidebar.sidebarOpen} class="checkbox" type="checkbox" name="" id="" aria-label="menu" />
+            <input onClick$={() => props.store.isSidebarOpen = !props.store.isSidebarOpen} class="checkbox" type="checkbox" name="" id="" aria-label="menu" />
             <div class="hamburger-lines">
               <span class="line line1"></span>
               <span class="line line2"></span>
@@ -28,9 +32,9 @@ export default component$(() => {
             </div>
       </div>
       <div class={{
-        "max-h-screen flex": sidebar.sidebarOpen,
-        "max-h-0": !sidebar.sidebarOpen,
-        "flex flex-col items-center justify-between transition-all duration-500 ease-out overflow-hidden xl:max-h-fit xl:overflow-visible h-[calc(100vh-59px-32px)] xl:h-[60%]": true,
+        "max-h-screen flex": props.store.isSidebarOpen,
+        "max-h-0": !props.store.isSidebarOpen,
+        "flex flex-col items-center justify-between transition-all duration-500 ease-out overflow-hidden xl:max-h-fit xl:overflow-visible h-[calc(100vh-60px)] xl:h-[60%]": true,
       }} >
         <ul class="pt-48 xl:pt-0">
           {menu
@@ -55,11 +59,11 @@ export default component$(() => {
             : ""}
         </ul>
         <div class="flex justify-center">
-          <a href="https://twitter.com/iBrunoj" target="blank">
+          <a href="https://github.com/brunoj0" target="blank">
             <img
               class="w-8 px-3 box-content border-r-2 hover:cursor-pointer"
               src="/assets/github-logo.svg"
-              alt="twitter"
+              alt="github"
             ></img>
           </a>
           <a

@@ -16,9 +16,8 @@ export default component$(() => {
         I am a front-end developer
       </h2>
       <p class="mt-8">
-        Lorem ipsum dolor sit amet. Quisque sagittis, justo eget iaculis
-        porttitor, arcu turpis varius elit, sit amet tempus massa massa id enim.
-        Nulla nec orci condimentum.
+        Welcome to my personal website! I'm thrilled that you've taken the time
+        to visit and learn more about me and my work as a front-end developer.
       </p>
       <button class="bg-cyan-5 px-10 py-3.5 w-64 shadow-btn text-black-5 mt-16 hover:bg-white hover:shadow-hoverbtn duration-500">
         read my blog
