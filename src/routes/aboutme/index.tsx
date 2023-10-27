@@ -1,5 +1,11 @@
 import { component$ } from "@builder.io/qwik";
 import { geCurrentRouteIndex } from "~/utils/helpers";
+import ImgProfile from '~/media/profile.png?jsx'
+import JsSvg from '~/media/js.svg?jsx'
+import HtmlImage from '~/media/html5.svg?jsx'
+import QwikImage from '~/media/qwik-logo-b.svg?jsx'
+import AngularImage from '~/media/angular.svg?jsx'
+import RxjsImage from '~/media/rxjs.png?jsx'
 
 export default component$(() => {
   const index = geCurrentRouteIndex();
@@ -9,11 +15,9 @@ export default component$(() => {
         about me
         <span class="opacity-25">0{index}</span>
       </h1>
-      <img
-        class="max-w-[374px] max-h-[500px]"
-        src="/assets/profile.png"
+      <ImgProfile class="max-w-[374px] max-h-[500px]"
         alt="profile"
-      ></img>
+        />
       <div class="flex flex-col xl:ml-20">
         <h1 class="hidden text-5xl tracking-mostwide xl:block">
           about me <span class="opacity-25">0{index}</span>
@@ -33,28 +37,24 @@ export default component$(() => {
         <hr class="mt-12"></hr>
 
         <h4 class="mt-10 text-xl">Tools & Technology that I use in my work</h4>
-        <div class="mt-16 flex items-center justify-around">
-          <img class="text-white-5" src="/assets/js.svg" alt="js"></img>
-          <img
+        <div class="mt-16 flex items-center justify-around pb-10">
+          <JsSvg class="text-white-5" alt="js"/>
+          <QwikImage
             class="text-white-5 w-14"
-            src="/assets/qwik-logo-b.svg"
             alt="qwik"
-          ></img>
-          <img
+          ></QwikImage>
+          <HtmlImage
             class="text-white-5 h-[47px]"
-            src="/assets/html5.svg"
             alt="html"
-          ></img>
-          <img
+          ></HtmlImage>
+          <AngularImage
             class="text-white-5"
-            src="/assets/angular.svg"
             alt="angular"
-          ></img>
-          <img
-            class="text-white-5 h-[62px]"
-            src="/assets/rxjs.png"
+          />
+          <RxjsImage
+            class="text-white-5 h-[62px] w-auto"
             alt="rxjs"
-          ></img>
+          ></RxjsImage>
         </div>
       </div>
     </div>

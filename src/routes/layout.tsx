@@ -12,7 +12,7 @@ export default component$(() => {
     <>
       <div class={{
         "overflow-hidden": store.isSidebarOpen,
-        "flex h-full flex-col xl:flex-row": true}}>
+        "flex min-h-full flex-col xl:flex-row": true}}>
         <Sidebar store={store} ></Sidebar>
         <main class="pt-16 xl:pt-0 flex flex-col-reverse xl:flex-col w-full">
           <Header/>

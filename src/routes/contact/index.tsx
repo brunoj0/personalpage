@@ -1,5 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import { geCurrentRouteIndex } from "~/utils/helpers";
+import GithubImage from '~/media/githblue.svg?jsx'
+import LinkedinImage from '~/media/linkedinblue.svg?jsx'
+import InstaImage from '~/media/instblue.svg?jsx'
 
 export default component$(() => {
   const index = geCurrentRouteIndex();
@@ -140,25 +143,22 @@ export default component$(() => {
             href="https://github.com/brunoj0"
             target="blank"
           >
-            <img
+            <GithubImage
               class="w-8 px-3 box-content hover:cursor-pointer"
-              src="/assets/githblue.svg"
               alt="github"
-            ></img>
+            ></GithubImage>
           </a>
-          <a href="https://twitter.com/iBrunoj" target="blank">
-            <img
-              class="w-8 px-3 box-content border-r-2 hover:cursor-pointer"
-              src="/assets/linkedinblue.svg"
+          <a href="https://www.linkedin.com/in/bruno-jamu%C5%82a-98402a200/" target="blank">
+            <LinkedinImage
+              class="w-8 px-3 box-content border-l-2 border-r-2 hover:cursor-pointer"
               alt="linkedin"
-            ></img>
+            ></LinkedinImage>
           </a>
           <a href="https://www.instagram.com/brunoj0/" target="blank">
-            <img
-              class="w-8 px-3 box-content border-l-2 hover:cursor-pointer"
-              src="/assets/instblue.svg"
+            <InstaImage
+              class="w-8 px-3 box-content hover:cursor-pointer"
               alt="instagram"
-            ></img>
+            ></InstaImage>
           </a>
         </div>
       </div>
